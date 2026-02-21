@@ -10,7 +10,7 @@ body{
 h3{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 45px;
 }
 #game-board {
     display: grid;
@@ -59,6 +59,104 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;   /* space between board and players */
-    margin-top: 50px;
+    gap: 200px; 
 }
+#result {
+    margin-top: 80px;
+    font-size: 24px;
+    color: #e51a68;
+    text-align: center;
+    height: 150px;
+    width: 200px;
+    border: grey solid 3px;
+    border-radius: 20px;
+    padding-top: 85px;
+}
+#kk{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#result {
+    margin-top: 80px;
+    font-size: 24px;
+    color: #e51a68;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    border: grey solid 3px;
+    border-radius: 20px;
+    padding-top: 85px;
+
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.4s ease;
+}
+
+@keyframes winnerPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px #e51a68;
+    }
+    50% {
+        box-shadow: 0 0 25px #e51a68;
+    }
+    100% {
+        box-shadow: 0 0 10px #e51a68;
+    }
+}
+
+.show-result {
+    animation: winnerPop 0.5s ease forwards,
+               glowPulse 1.5s infinite;
+    border-color: #e51a68;
+}
+#resetBtn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #1F0A38;
+    color: white;
+    border: 2px solid #6a0dad;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;    
+}
+#reset-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resetBtn:hover {
+    background-color: #6a0dad;
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #6a0dad;
+}
+
+#resetBtn:active {
+    transform: scale(0.95);
+}
+@keyframes activeGlow {
+    0% { box-shadow: 0 0 5px #00FFFF; }
+    50% { box-shadow: 0 0 20px #00FFFF; }
+    100% { box-shadow: 0 0 5px #00FFFF; }
+}
+
+.active-player {
+    animation: activeGlow 1.5s infinite;
+    border-color: #00FFFF !important;
+}
+
