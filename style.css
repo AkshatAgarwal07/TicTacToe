@@ -1,0 +1,64 @@
+#btn{
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: black;
+    color: white;
+    
+}
+
+h3{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 50px;
+}
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #00FFFF;
+    background-color:#111827;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+
+}
+
+#player1{
+    height: 100px;
+    width: 100px;
+    border: 3px solid ;
+    border-radius: 15px  ;
+    
+
+}
+#player2{
+    height: 100px;
+    width: 100px;
+    border: 3px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px  ;
+}
+#player1, #player2 {
+    padding: 20px;
+    background-color: #1F0A38;
+    border: 3px solid #6a0dad;
+}
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;   /* space between board and players */
+    margin-top: 50px;
+}
